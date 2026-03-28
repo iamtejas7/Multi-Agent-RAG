@@ -1,0 +1,50 @@
+[
+  {
+    "doc_id": "FIN-001",
+    "title": "Travel and Expense Reimbursement Policy",
+    "department": "Finance",
+    "content": "Business travel must be pre-approved by the reporting manager for domestic travel and by the department head for international travel. Air travel bookings should be made through the approved travel portal (SAP Concur). Economy class is standard for domestic flights; business class is permitted for international flights exceeding 6 hours. Hotel accommodations are reimbursed up to INR 7,500 per night for Tier-1 cities and INR 5,000 for other locations. Daily meal allowance is INR 1,500 for domestic travel and USD 75 for international travel. All expense claims must be submitted with original receipts within 15 days of travel completion. Reimbursements are processed within 10 business days of approval.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-06-01"
+  },
+  {
+    "doc_id": "FIN-002",
+    "title": "Procurement and Purchase Order Policy",
+    "department": "Finance",
+    "content": "All purchases exceeding INR 50,000 require a formal Purchase Order (PO) raised through SAP. Purchases above INR 5,00,000 require three competitive quotes from approved vendors. Purchases exceeding INR 25,00,000 require CFO approval and must go through the formal tender process. Vendor onboarding requires compliance verification, NDA execution, and Finance team approval. Payment terms are Net 30 for domestic vendors and Net 45 for international vendors. All invoices must reference a valid PO number. Emergency procurement (without PO) is permitted only with VP-level approval and must be regularized within 5 business days.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-04-15"
+  },
+  {
+    "doc_id": "FIN-003",
+    "title": "Corporate Credit Card Policy",
+    "department": "Finance",
+    "content": "Corporate credit cards are issued to employees at Manager level and above for business expenses. Monthly credit limits are: Managers - INR 1,00,000, Senior Managers - INR 2,00,000, Directors - INR 5,00,000, VPs and above - INR 10,00,000. Personal expenses on corporate cards are strictly prohibited and may result in disciplinary action. All transactions must be reconciled in SAP Concur within 7 days with supporting receipts. Cards are automatically blocked if reconciliation is pending for more than 30 days. Lost or stolen cards must be reported immediately to the Finance team and the card issuer. Annual review of card usage is conducted by the Finance audit team.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-05-20"
+  },
+  {
+    "doc_id": "FIN-004",
+    "title": "Payroll and Compensation Structure",
+    "department": "Finance",
+    "content": "Salaries are processed on the last working day of each month via direct bank transfer. The compensation structure includes Basic Pay (40% of CTC), HRA (50% of Basic), Special Allowance, and Performance Bonus. Statutory deductions include Provident Fund (12% of Basic), Professional Tax, and Income Tax (TDS) as per applicable slabs. Employees can submit tax-saving investment declarations under Section 80C, 80D, and HRA exemptions through the HR portal by January 31st each year. Revised TDS is applied from February payroll. Full and final settlement for exiting employees is processed within 45 days of the last working day. Payslips are available on the Employee Self-Service portal by the 2nd of each month.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-07-01"
+  },
+  {
+    "doc_id": "FIN-005",
+    "title": "Budget Planning and Approval Process",
+    "department": "Finance",
+    "content": "Annual budget planning begins in October for the next fiscal year (April-March). Department heads must submit budget proposals by November 15th. The Finance team consolidates and reviews all proposals by December 15th. Final budget approval by the Board is completed by January 31st. Quarterly budget reviews are conducted to track actuals vs. budget with variance analysis. Budget overruns exceeding 10% require CFO approval. Mid-year budget revisions are permitted with business justification and CEO approval. Capital expenditure (CapEx) above INR 50,00,000 requires Board approval regardless of budget allocation.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-03-15"
+  },
+  {
+    "doc_id": "FIN-006",
+    "title": "Invoice Processing and Accounts Payable",
+    "department": "Finance",
+    "content": "All vendor invoices must be submitted to the Accounts Payable team at ap@company.com or through the vendor portal. Invoices must include valid PO number, GST details, bank account information, and itemized descriptions. Three-way matching (PO, GRN, Invoice) is required for goods-related invoices. Payment processing follows the standard payment cycle: invoices received by the 15th are paid by the 30th, and invoices received after the 15th are paid by the 15th of the following month. Early payment discounts of 2% are negotiated for payments within 10 days where applicable. Disputed invoices must be flagged within 7 days of receipt. The Finance team targets 98% on-time payment compliance.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-06-30"
+  }
+]

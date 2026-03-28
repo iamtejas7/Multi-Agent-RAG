@@ -1,0 +1,50 @@
+[
+  {
+    "doc_id": "GEN-001",
+    "title": "Company Overview",
+    "department": "General",
+    "content": "TechNova Solutions Pvt. Ltd. was founded in 2010 and is headquartered in Bangalore, India with offices in Mumbai, Hyderabad, Pune, and international offices in San Francisco and London. The company has over 5,000 employees globally and specializes in enterprise software solutions, cloud consulting, and digital transformation services. TechNova is ISO 27001 certified and SOC 2 Type II compliant. The company's mission is to empower enterprises with intelligent technology solutions. Current CEO is Rajesh Kumar, and the company reported annual revenue of INR 2,500 crores in FY 2023-24.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-08-01"
+  },
+  {
+    "doc_id": "GEN-002",
+    "title": "Office Locations and Facilities",
+    "department": "General",
+    "content": "Bangalore (HQ): TechNova Campus, Outer Ring Road, Marathahalli - Houses 2,500 employees across 3 buildings. Facilities include cafeteria, gymnasium, creche, and medical room. Mumbai: Bandra Kurla Complex, Tower B, Floors 12-15. Hyderabad: HITEC City, Mindspace Campus, Building 5. Pune: Hinjewadi IT Park, Phase 2, Tower C. San Francisco: 100 Market Street, Suite 400. London: Canary Wharf, One Canada Square, Level 28. All offices are accessible 24/7 with valid ID badges. Visitor access requires pre-registration through the front desk or the Visitor Management System. Parking is available on a first-come basis; carpooling is encouraged with reserved spots for carpool vehicles.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-05-01"
+  },
+  {
+    "doc_id": "GEN-003",
+    "title": "Learning and Development Programs",
+    "department": "General",
+    "content": "TechNova offers an annual learning budget of INR 50,000 per employee for external certifications and courses. The internal learning platform 'TechNova Academy' hosts over 500 courses across technology, leadership, and soft skills. Certification reimbursement covers AWS, Azure, GCP, PMP, ITIL, and other industry-recognized certifications with a pass guarantee. Employees must complete a minimum of 40 learning hours per year. Leadership Development Program (LDP) is available for high-potential employees identified during performance reviews. Brown bag sessions and tech talks are conducted weekly. A mentorship program pairs junior employees with senior leaders for 6-month cycles.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-07-15"
+  },
+  {
+    "doc_id": "GEN-004",
+    "title": "Employee Referral Program",
+    "department": "General",
+    "content": "Employees can refer candidates for open positions through the internal referral portal. Referral bonuses are: INR 50,000 for junior roles (0-3 years experience), INR 75,000 for mid-level roles (3-8 years), INR 1,25,000 for senior roles (8+ years), and INR 2,00,000 for leadership positions. Bonuses are paid in two installments: 50% after the referred candidate completes 90 days, and 50% after 180 days of employment. There is no limit on the number of referrals an employee can make. Referrals for roles within the employee's direct reporting chain are not eligible for bonuses. The referral portal tracks application status and expected payout dates.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-06-01"
+  },
+  {
+    "doc_id": "GEN-005",
+    "title": "Sustainability and CSR Initiatives",
+    "department": "General",
+    "content": "TechNova is committed to achieving carbon neutrality by 2030. Current initiatives include 100% renewable energy for the Bangalore campus (solar panels covering 60% of energy needs), paperless office operations, and e-waste recycling programs. The CSR program allocates 2% of net profits annually to education, healthcare, and environmental projects. Employees receive 2 paid volunteer days per year for approved CSR activities. The 'TechNova Green Champions' program recognizes employees contributing to sustainability goals. Water conservation measures have reduced campus water consumption by 35% since 2022.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-04-10"
+  },
+  {
+    "doc_id": "GEN-006",
+    "title": "Internal Communication Channels",
+    "department": "General",
+    "content": "Official internal communication channels include: Slack (primary messaging platform with department-specific channels), Microsoft Teams (for video conferencing and meetings), Confluence (knowledge base and documentation), Jira (project management and task tracking), and email for formal communications. Company-wide announcements are posted on the 'TechNova Pulse' intranet portal. Town halls are conducted quarterly by the CEO. Department all-hands meetings are held monthly. The 'Ask Leadership' channel on Slack allows employees to directly ask questions to the leadership team. Emergency notifications are sent via SMS and push notifications through the TechNova mobile app.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-08-10"
+  }
+]

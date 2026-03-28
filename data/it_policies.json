@@ -1,0 +1,58 @@
+[
+  {
+    "doc_id": "IT-001",
+    "title": "Password and Authentication Policy",
+    "department": "IT",
+    "content": "All employees must use passwords with a minimum of 12 characters, including uppercase, lowercase, numbers, and special characters. Passwords must be changed every 90 days and cannot repeat the last 5 passwords. Multi-factor authentication (MFA) is mandatory for all corporate applications including email, VPN, and cloud services. Employees must not share credentials under any circumstances. After 5 failed login attempts, accounts are automatically locked for 30 minutes. Password managers approved by IT (LastPass Enterprise or 1Password Business) must be used. Biometric authentication is enabled for mobile device access.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-08-01"
+  },
+  {
+    "doc_id": "IT-002",
+    "title": "VPN and Remote Access Policy",
+    "department": "IT",
+    "content": "Employees accessing corporate resources remotely must use the company-approved VPN (GlobalProtect by Palo Alto). VPN connections are required for accessing internal applications, file servers, and development environments. Split tunneling is disabled for security purposes. VPN sessions automatically disconnect after 12 hours of continuous use and require re-authentication. Personal devices must be enrolled in the Mobile Device Management (MDM) system before VPN access is granted. Employees must not use public Wi-Fi without VPN protection. VPN access is provisioned through the IT Service Desk with manager approval.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-06-10"
+  },
+  {
+    "doc_id": "IT-003",
+    "title": "Software Installation and Licensing",
+    "department": "IT",
+    "content": "Only IT-approved software may be installed on company devices. The approved software catalog is available on the IT portal under 'Software Center'. Requests for new software must be submitted through the IT Service Desk with business justification and manager approval. Open-source software usage requires review by the IT Security team for license compliance and vulnerability assessment. Unauthorized software installation may result in disciplinary action. Software licenses are managed centrally by IT; employees must not purchase software independently. All software must be kept updated to the latest stable version.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-05-15"
+  },
+  {
+    "doc_id": "IT-004",
+    "title": "Data Classification and Handling",
+    "department": "IT",
+    "content": "Company data is classified into four categories: Public, Internal, Confidential, and Restricted. Public data can be shared externally without restrictions. Internal data is for employee use only and must not be shared outside the organization. Confidential data requires encryption during transmission and storage, and access is limited to authorized personnel. Restricted data (PII, financial records, trade secrets) requires additional safeguards including access logging, DLP controls, and approval from the Data Protection Officer. All employees must complete data handling training annually. Data breaches must be reported to the IT Security team within 1 hour of discovery.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-07-20"
+  },
+  {
+    "doc_id": "IT-005",
+    "title": "Laptop and Device Policy",
+    "department": "IT",
+    "content": "All employees receive a company-issued laptop configured with standard security software including antivirus (CrowdStrike Falcon), endpoint detection (Carbon Black), and disk encryption (BitLocker/FileVault). Laptops must be locked when unattended (Windows+L or Cmd+Ctrl+Q). Lost or stolen devices must be reported to IT Security within 2 hours for remote wipe. Employees may use personal mobile devices for company email with MDM enrollment. Company devices must not be used by family members or unauthorized individuals. Hardware refresh cycle is every 3 years. Employees leaving the company must return all devices on their last working day.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-04-01"
+  },
+  {
+    "doc_id": "IT-006",
+    "title": "IT Service Desk and Support",
+    "department": "IT",
+    "content": "The IT Service Desk operates Monday to Friday, 8:00 AM to 8:00 PM. Support requests can be submitted via the IT portal (ServiceNow), email (itsupport@company.com), or phone (ext. 5555). Tickets are prioritized as P1 (Critical - 1 hour response), P2 (High - 4 hours), P3 (Medium - 8 hours), P4 (Low - 24 hours). P1 incidents include system outages affecting multiple users, security breaches, and data loss. After-hours emergency support is available for P1 incidents by calling the IT emergency hotline. Self-service solutions for common issues are available on the IT Knowledge Base.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-03-01"
+  },
+  {
+    "doc_id": "IT-007",
+    "title": "Cloud Services and SaaS Usage",
+    "department": "IT",
+    "content": "Approved cloud platforms include AWS, Azure, and GCP for infrastructure, and Microsoft 365, Slack, Jira, Confluence, and Salesforce for productivity. Employees must not store company data on unapproved cloud services (shadow IT). All cloud resources must be provisioned through the Cloud Center of Excellence (CCoE) team. AWS accounts are managed under the organization's consolidated billing. Data residency requirements mandate that customer data be stored in the ap-south-1 (Mumbai) region. Cloud access keys must be rotated every 60 days and must never be committed to source code repositories.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-08-15"
+  }
+]

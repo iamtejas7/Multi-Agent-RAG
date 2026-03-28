@@ -1,0 +1,66 @@
+[
+  {
+    "doc_id": "HR-001",
+    "title": "Annual Leave Policy",
+    "department": "HR",
+    "content": "All full-time employees are entitled to 24 days of paid annual leave per calendar year. Leave accrues at 2 days per month of service. Employees must submit leave requests at least 5 business days in advance for planned leave. Unused leave up to 5 days may be carried forward to the next year, subject to manager approval. Leave encashment is permitted for up to 10 days at the end of the fiscal year. Part-time employees receive pro-rated leave based on their contracted hours. During probation period (first 6 months), employees may use up to 6 days of leave.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-06-15"
+  },
+  {
+    "doc_id": "HR-002",
+    "title": "Sick Leave Policy",
+    "department": "HR",
+    "content": "Employees are entitled to 12 days of paid sick leave per year. Sick leave exceeding 3 consecutive days requires a medical certificate from a registered medical practitioner. Unused sick leave cannot be carried forward or encashed. In case of extended illness beyond 12 days, employees may apply for medical leave under the company's long-term disability policy. Employees must notify their manager within 2 hours of their scheduled start time if they are unable to attend work due to illness. Frequent unplanned absences may trigger a wellness review.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-03-10"
+  },
+  {
+    "doc_id": "HR-003",
+    "title": "Maternity and Paternity Leave",
+    "department": "HR",
+    "content": "Female employees are entitled to 26 weeks of paid maternity leave. This can be availed up to 8 weeks before the expected delivery date. Paternity leave of 2 weeks is available for male employees, to be availed within 6 months of the child's birth. Adoptive parents are entitled to 12 weeks of leave from the date of adoption for children under 3 years of age. Employees must submit documentation including medical certificates or adoption papers to HR at least 30 days before the expected leave start date.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-01-15"
+  },
+  {
+    "doc_id": "HR-004",
+    "title": "Performance Review Process",
+    "department": "HR",
+    "content": "Performance reviews are conducted bi-annually in June and December. The review process includes self-assessment, peer feedback (360-degree), and manager evaluation. Employees are rated on a 5-point scale: 1-Needs Improvement, 2-Below Expectations, 3-Meets Expectations, 4-Exceeds Expectations, 5-Outstanding. Ratings directly influence annual bonus calculations and promotion eligibility. Employees rated 1 or 2 are placed on a Performance Improvement Plan (PIP) lasting 90 days. Goal-setting for the next review cycle must be completed within 2 weeks of the review. Compensation adjustments based on performance are effective from April 1st each year.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-07-01"
+  },
+  {
+    "doc_id": "HR-005",
+    "title": "Employee Benefits - Health Insurance",
+    "department": "HR",
+    "content": "The company provides comprehensive health insurance coverage for all full-time employees, their spouse, and up to 2 dependent children. The base coverage is INR 5,00,000 per annum per family. Employees can opt for a top-up plan of INR 10,00,000 or INR 20,00,000 at subsidized rates. Coverage includes hospitalization, day-care procedures, pre and post hospitalization expenses (30 days pre, 60 days post), maternity benefits, and annual health check-ups. Pre-existing conditions are covered after a waiting period of 2 years. Dental and vision care are available as add-on benefits. Claims must be filed within 30 days of discharge.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-04-20"
+  },
+  {
+    "doc_id": "HR-006",
+    "title": "Work From Home Policy",
+    "department": "HR",
+    "content": "Employees may work from home up to 3 days per week with manager approval. A minimum of 2 days per week must be spent in the office for collaboration. Remote work requests must be submitted through the HR portal by Friday of the preceding week. Employees working from home must be available during core hours (10:00 AM to 4:00 PM). The company provides a monthly home office allowance of INR 2,000 for internet and utilities. Employees must ensure a secure and ergonomic workspace at home. Fully remote arrangements may be approved for specific roles with VP-level approval.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-05-01"
+  },
+  {
+    "doc_id": "HR-007",
+    "title": "Employee Onboarding Process",
+    "department": "HR",
+    "content": "New employee onboarding spans the first 30 days of employment. Day 1 includes IT setup, ID card issuance, office tour, and compliance training. Week 1 covers department introductions, buddy assignment, and initial project briefings. The probation period is 6 months, during which monthly check-ins with the manager and HR are mandatory. New hires must complete all mandatory compliance training modules within 14 days. A formal 90-day review is conducted to assess initial performance and cultural fit. Onboarding feedback is collected at 30, 60, and 90 days.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-02-28"
+  },
+  {
+    "doc_id": "HR-008",
+    "title": "Code of Conduct and Ethics",
+    "department": "HR",
+    "content": "All employees must adhere to the company's Code of Conduct which covers professional behavior, conflict of interest, anti-bribery, and data confidentiality. Employees must disclose any potential conflicts of interest to their manager and the Ethics Committee. Gifts from vendors or clients exceeding INR 5,000 in value must be reported to the compliance team. Harassment of any form including verbal, physical, or digital is strictly prohibited and subject to immediate disciplinary action. Whistleblower protections are in place for employees reporting ethical violations. Annual ethics training is mandatory for all employees.",
+    "effective_date": "2024-01-01",
+    "last_updated": "2024-01-01"
+  }
+]
