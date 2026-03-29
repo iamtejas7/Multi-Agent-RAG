@@ -5,12 +5,12 @@ import chromadb
 from chromadb.config import Settings
 
 from config import (
+    AWS_REGION,
+    BEDROCK_EMBEDDING_MODEL_ID,
     CHROMA_PERSIST_DIR,
     COLLECTION_MAP,
     DATA_DIR,
-    HF_EMBEDDING_MODEL,
     TOP_K_RESULTS,
-    USE_BEDROCK_EMBEDDINGS,
 )
 
 _client: chromadb.ClientAPI | None = None
@@ -22,30 +22,29 @@ def _get_embedding_function():
     if _embedding_fn is not None:
         return _embedding_fn
 
-    if USE_BEDROCK_EMBEDDINGS:
-        from chromadb.utils.embedding_functions import AmazonBedrockEmbeddingFunction
-        from config import AWS_REGION, BEDROCK_EMBEDDING_MODEL_ID
+    import boto3
+    from chromadb.utils.embedding_functions import AmazonBedrockEmbeddingFunction
 
-        _embedding_fn = AmazonBedrockEmbeddingFunction(
-            model_name=BEDROCK_EMBEDDING_MODEL_ID,
-            region_name=AWS_REGION,
-        )
-    else:
-        from chromadb.utils.embedding_functions import (
-            SentenceTransformerEmbeddingFunction,
-        )
-
-        _embedding_fn = SentenceTransformerEmbeddingFunction(
-            model_name=HF_EMBEDDING_MODEL
-        )
+    session = boto3.Session(region_name=AWS_REGION)
+    _embedding_fn = AmazonBedrockEmbeddingFunction(
+        session=session,
+        model_name=BEDROCK_EMBEDDING_MODEL_ID,
+        region_name=AWS_REGION,
+    )
     return _embedding_fn
+
+
+DEPLOYMENT_MODE = os.getenv("DEPLOYMENT_MODE", "local")
 
 
 def get_chroma_client() -> chromadb.ClientAPI:
     global _client
     if _client is None:
-        os.makedirs(CHROMA_PERSIST_DIR, exist_ok=True)
-        _client = chromadb.PersistentClient(path=CHROMA_PERSIST_DIR)
+        if DEPLOYMENT_MODE == "agentcore":
+            _client = chromadb.EphemeralClient()
+        else:
+            os.makedirs(CHROMA_PERSIST_DIR, exist_ok=True)
+            _client = chromadb.PersistentClient(path=CHROMA_PERSIST_DIR)
     return _client
 
 

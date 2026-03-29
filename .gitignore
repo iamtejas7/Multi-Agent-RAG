@@ -1,3 +1,8 @@
-# Python virtual environment
 venv/
 chroma_db/
+.bedrock_agentcore.yaml
+.bedrock_agentcore/
+__pycache__
+**/__pycache__/
+**/__pycache__/*
+
