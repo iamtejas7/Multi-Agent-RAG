@@ -17,20 +17,37 @@ _client: chromadb.ClientAPI | None = None
 _embedding_fn = None
 
 
+FALLBACK_HF_MODEL = "all-MiniLM-L6-v2"
+
+
 def _get_embedding_function():
     global _embedding_fn
     if _embedding_fn is not None:
         return _embedding_fn
 
-    import boto3
-    from chromadb.utils.embedding_functions import AmazonBedrockEmbeddingFunction
+    try:
+        import boto3
+        from chromadb.utils.embedding_functions import AmazonBedrockEmbeddingFunction
 
-    session = boto3.Session(region_name=AWS_REGION)
-    _embedding_fn = AmazonBedrockEmbeddingFunction(
-        session=session,
-        model_name=BEDROCK_EMBEDDING_MODEL_ID,
-        region_name=AWS_REGION,
-    )
+        session = boto3.Session(region_name=AWS_REGION)
+        _embedding_fn = AmazonBedrockEmbeddingFunction(
+            session=session,
+            model_name=BEDROCK_EMBEDDING_MODEL_ID,
+            region_name=AWS_REGION,
+        )
+        # Quick validation call to ensure Titan is accessible
+        _embedding_fn(["test"])
+    except Exception as e:
+        import logging
+        logging.getLogger(__name__).warning(
+            "Bedrock Titan embeddings unavailable (%s). Falling back to SentenceTransformers.", e
+        )
+        from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+
+        _embedding_fn = SentenceTransformerEmbeddingFunction(
+            model_name=FALLBACK_HF_MODEL
+        )
+
     return _embedding_fn
 
 
