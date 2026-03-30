@@ -20,23 +20,42 @@ _embedding_fn = None
 FALLBACK_HF_MODEL = "all-MiniLM-L6-v2"
 
 
+class BedrockTitanEmbeddingFunction:
+    """Custom Bedrock Titan embedding function that calls boto3 directly,
+    avoiding ChromaDB's wrapper which double-encodes the model ID."""
+
+    def __init__(self, model_id: str, region: str):
+        import boto3
+        self._client = boto3.client("bedrock-runtime", region_name=region)
+        self._model_id = model_id
+
+    def __call__(self, input: list[str]) -> list[list[float]]:
+        import json
+        embeddings = []
+        for text in input:
+            response = self._client.invoke_model(
+                modelId=self._model_id,
+                contentType="application/json",
+                accept="application/json",
+                body=json.dumps({"inputText": text}),
+            )
+            result = json.loads(response["body"].read())
+            embeddings.append(result["embedding"])
+        return embeddings
+
+
 def _get_embedding_function():
     global _embedding_fn
     if _embedding_fn is not None:
         return _embedding_fn
 
     try:
-        import boto3
-        from chromadb.utils.embedding_functions import AmazonBedrockEmbeddingFunction
-
-        session = boto3.Session(region_name=AWS_REGION)
-        _embedding_fn = AmazonBedrockEmbeddingFunction(
-            session=session,
-            model_name=BEDROCK_EMBEDDING_MODEL_ID,
-            region_name=AWS_REGION,
+        fn = BedrockTitanEmbeddingFunction(
+            model_id=BEDROCK_EMBEDDING_MODEL_ID,
+            region=AWS_REGION,
         )
-        # Quick validation call to ensure Titan is accessible
-        _embedding_fn(["test"])
+        fn(["test"])
+        _embedding_fn = fn
     except Exception as e:
         import logging
         logging.getLogger(__name__).warning(
