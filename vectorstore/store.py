@@ -29,6 +29,9 @@ class BedrockTitanEmbeddingFunction:
         self._client = boto3.client("bedrock-runtime", region_name=region)
         self._model_id = model_id
 
+    def name(self) -> str:
+        return "bedrock-titan"
+
     def __call__(self, input: list[str]) -> list[list[float]]:
         import json
         embeddings = []
