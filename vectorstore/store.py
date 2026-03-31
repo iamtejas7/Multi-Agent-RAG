@@ -19,9 +19,6 @@ _client: chromadb.ClientAPI | None = None
 _embedding_fn = None
 
 
-FALLBACK_HF_MODEL = "all-MiniLM-L6-v2"
-
-
 class BedrockTitanEmbeddingFunction:
     """Custom Bedrock Titan embedding function that calls boto3 directly,
     avoiding ChromaDB's wrapper which double-encodes the model ID."""
@@ -68,24 +65,10 @@ def _get_embedding_function():
     if _embedding_fn is not None:
         return _embedding_fn
 
-    try:
-        fn = BedrockTitanEmbeddingFunction(
-            model_id=BEDROCK_EMBEDDING_MODEL_ID,
-            region=AWS_REGION,
-        )
-        fn(["test"])
-        _embedding_fn = fn
-    except Exception as e:
-        import logging
-        logging.getLogger(__name__).warning(
-            "Bedrock Titan embeddings unavailable (%s). Falling back to SentenceTransformers.", e
-        )
-        from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
-
-        _embedding_fn = SentenceTransformerEmbeddingFunction(
-            model_name=FALLBACK_HF_MODEL
-        )
-
+    _embedding_fn = BedrockTitanEmbeddingFunction(
+        model_id=BEDROCK_EMBEDDING_MODEL_ID,
+        region=AWS_REGION,
+    )
     return _embedding_fn
 
 
