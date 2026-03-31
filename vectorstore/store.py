@@ -39,10 +39,10 @@ class BedrockTitanEmbeddingFunction:
     def name(self) -> str:
         return "bedrock-titan"
 
-    def __call__(self, input: list[str]) -> list[list[float]]:
+    def _embed(self, texts: list[str]) -> list[list[float]]:
         import json
         embeddings = []
-        for text in input:
+        for text in texts:
             response = self._client.invoke_model(
                 modelId=self._model_id,
                 contentType="application/json",
@@ -52,6 +52,15 @@ class BedrockTitanEmbeddingFunction:
             result = json.loads(response["body"].read())
             embeddings.append(result["embedding"])
         return embeddings
+
+    def __call__(self, input: list[str]) -> list[list[float]]:
+        return self._embed(input)
+
+    def embed_documents(self, documents: list[str]) -> list[list[float]]:
+        return self._embed(documents)
+
+    def embed_query(self, input: list[str]) -> list[list[float]]:
+        return self._embed(input)
 
 
 def _get_embedding_function():
