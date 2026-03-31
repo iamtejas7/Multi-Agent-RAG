@@ -179,7 +179,7 @@ agentcore --help
 ### Step 2: Configure the Agent
 
 ```bash
-agentcore configure --entrypoint agent.py --name technova-assistant --requirements-file requirements-agentcore.txt --deployment-type direct_code_deploy --runtime PYTHON_3_13 --region us-east-2 --execution-role your_role --disable-memory --disable-otel --non-interactive
+agentcore configure --entrypoint agent.py --name technova_assistant --requirements-file requirements-agentcore.txt --deployment-type direct_code_deploy --runtime PYTHON_3_13 --region us-east-2 --execution-role your_role --disable-memory --disable-otel --non-interactive
 ```
 
 This creates `.bedrock_agentcore.yaml` with all deployment configuration.
