@@ -5,7 +5,9 @@ import chromadb
 from chromadb.config import Settings
 
 from config import (
+    AWS_ACCESS_KEY_ID,
     AWS_REGION,
+    AWS_SECRET_ACCESS_KEY,
     BEDROCK_EMBEDDING_MODEL_ID,
     CHROMA_PERSIST_DIR,
     COLLECTION_MAP,
@@ -26,7 +28,12 @@ class BedrockTitanEmbeddingFunction:
 
     def __init__(self, model_id: str, region: str):
         import boto3
-        self._client = boto3.client("bedrock-runtime", region_name=region)
+        session_kwargs = {"region_name": region}
+        if AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY:
+            session_kwargs["aws_access_key_id"] = AWS_ACCESS_KEY_ID
+            session_kwargs["aws_secret_access_key"] = AWS_SECRET_ACCESS_KEY
+        session = boto3.Session(**session_kwargs)
+        self._client = session.client("bedrock-runtime")
         self._model_id = model_id
 
     def name(self) -> str:
